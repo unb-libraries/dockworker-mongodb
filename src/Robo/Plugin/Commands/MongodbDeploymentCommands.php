@@ -16,8 +16,9 @@ class MongodbDeploymentCommands extends DockworkerLocalCommands {
    */
   public function getErrorLogExceptions() {
     return [
-        'config.system.sessions does not exist' => 'Not a critical error',
+        'Opening WiredTiger' => 'Not a critical error',
         'Received signal' => 'Not a critical error',
+        'config.system.sessions does not exist' => 'Not a critical error',
     ];
   }
 
