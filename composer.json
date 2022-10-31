@@ -1,0 +1,25 @@
+{
+  "name": "unb-libraries/dockworker-mongodb",
+  "description": "Services for wiring up Mongodb containers for development",
+  "type": "library",
+  "require": {
+    "unb-libraries/dockworker": "^5"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "UNB Libraries",
+      "email": "libsupport@unb.ca"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dockworker\\": "src"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "vendor/bin/dockworker git:setup-hooks"
+    ]
+  }
+}
