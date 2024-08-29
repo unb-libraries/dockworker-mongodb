@@ -22,9 +22,11 @@ class MongodbDeploymentCommands extends DockworkerDaemonCommands {
         [],
         array_values(
             [
-                'Not a critical error' => 'Opening WiredTiger',
-                'Not a critical error' => 'Received signal',
-                'Not a critical error' => 'config.system.sessions does not exist',            ]
+                'Not a critical error 1' => 'Opening WiredTiger',
+                'Not a critical error 2' => 'Received signal',
+                'Not a critical error 3' => 'config.system.sessions does not exist',
+                'Not a critical error 4' => 'Implicit TCP FastOpen unavailable',
+            ]
         ),
     ];
   }
