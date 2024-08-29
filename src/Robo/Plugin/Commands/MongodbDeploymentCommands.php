@@ -12,13 +12,20 @@ class MongodbDeploymentCommands extends DockworkerDaemonCommands {
   /**
    * Provides log checker with ignored log exception items for local Mongodb.
    *
-   * @hook on-event dockworker-deployment-log-error-triggers
+   * @hook on-event dockworker-logs-errors-exceptions
+   *
+   * @return mixed[]
+   *   The error log exceptions.
    */
   public function getErrorLogExceptions() {
     return [
-        'Opening WiredTiger' => 'Not a critical error',
-        'Received signal' => 'Not a critical error',
-        'config.system.sessions does not exist' => 'Not a critical error',
+        [],
+        array_values(
+            [
+                'Not a critical error' => 'Opening WiredTiger',
+                'Not a critical error' => 'Received signal',
+                'Not a critical error' => 'config.system.sessions does not exist',            ]
+        ),
     ];
   }
 
