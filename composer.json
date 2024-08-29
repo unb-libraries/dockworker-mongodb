@@ -3,9 +3,11 @@
   "description": "Services for wiring up Mongodb containers for development",
   "type": "library",
   "require": {
-    "unb-libraries/dockworker": "^5"
+    "unb-libraries/dockworker-daemon": "6.x-dev"
   },
   "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "UNB Libraries",
@@ -17,9 +19,9 @@
       "Dockworker\\": "src"
     }
   },
-  "scripts": {
-    "post-update-cmd": [
-      "vendor/bin/dockworker git:setup-hooks"
-    ]
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
   }
 }

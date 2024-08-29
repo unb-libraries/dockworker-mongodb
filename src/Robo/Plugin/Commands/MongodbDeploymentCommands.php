@@ -2,17 +2,17 @@
 
 namespace Dockworker\Robo\Plugin\Commands;
 
-use Dockworker\Robo\Plugin\Commands\DockworkerLocalCommands;
+use Dockworker\DockworkerDaemonCommands;
 
 /**
  * Defines the commands used to interact with a local Mongodb application.
  */
-class MongodbDeploymentCommands extends DockworkerLocalCommands {
+class MongodbDeploymentCommands extends DockworkerDaemonCommands {
 
   /**
    * Provides log checker with ignored log exception items for local Mongodb.
    *
-   * @hook on-event dockworker-deployment-log-error-exceptions
+   * @hook on-event dockworker-deployment-log-error-triggers
    */
   public function getErrorLogExceptions() {
     return [
